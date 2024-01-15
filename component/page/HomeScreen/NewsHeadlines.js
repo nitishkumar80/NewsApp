@@ -51,15 +51,8 @@ const NewsHeadlines = () => {
   const renderBreakingNewsItem = ({ item }) => (
     <TouchableOpacity onPress={() => openNewsLink(item.url)}>
     <View style={styles.newsItem}>
-       <Image
-          width={300}
-          height={100}
-          resizeMode={"cover"}
-          source={{
-            uri: item.urlToImage,
-          }}
-          alt="Alternate Text"
-        />
+    <Image resizeMode='cover'   style={{ width: 355, height: 200 }} source={{ uri: item.urlToImage }} accessibilityLabel="Alternate Text" />
+
       <Text style={styles.newsTitle}>{item.title}</Text>
       <Text style={styles.date}>{moment(item.publishedAt).format("LLL")}</Text>
 

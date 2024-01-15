@@ -101,8 +101,10 @@ const LoginScreen = () => {
     <View style={styles.container}>
       <Image
         source={require("../assets/login0.png")}
-        style={styles.logo}
-        resizeMode="contain"
+        // style={styles.logo}
+        style={{ width: 355, height: 200 }}
+        resizeMode='cover'
+
       />
       <TextInput
         style={styles.input}
@@ -124,6 +126,17 @@ const LoginScreen = () => {
       <Animated.View style={[styles.animationContainer, animatedStyle]}>
         <Text style={styles.animationText}>Login Successful!</Text>
       </Animated.View>
+
+      <Text style={styles.user}>
+        Username: nitish
+        <br/>
+        <br/>
+        Password:1234567
+      </Text>
+
+      <Text>
+        Enter username or password to login homepage
+      </Text>
     </View>
   );
 };
@@ -156,9 +169,9 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 18,
   },
-  logo: {
-    height: 130,
-    marginTop: -123,
+  user: {
+   marginVertical:80,
+   
   },
   animationContainer: {
     position: "absolute",

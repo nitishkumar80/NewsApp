@@ -24,15 +24,17 @@ const Business = () => {
   const renderNewsItem = ({ item }) => (
     <TouchableOpacity onPress={() => openNewsLink(item.url)}>
       <View style={styles.newsContainer}>
-        <Image
+        {/* <Image
           width={355}
           height={200}
-          resizeMode={"cover"}
           source={{
             uri: item.urlToImage,
           }}
-          alt="Alternate Text"
-        />
+          accessibilityLabel="Alternate Text"
+        /> */}
+
+<Image resizeMode='cover'   style={{ width: 355, height: 200 }} source={{ uri: item.urlToImage }} accessibilityLabel="Alternate Text" />
+
 
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.date}>{moment(item.publishedAt).format("LLL")}</Text>

@@ -31,6 +31,8 @@ export const NewsScreen = () => {
       keyExtractor={(item, index) => index.toString()}
       renderItem={({ item }) => (
         <View>
+          <Image resizeMode='cover'   style={{ width: 355, height: 200 }} source={{ uri: item.urlToImage }} accessibilityLabel="Alternate Text" />
+
           <Text>{item.title}</Text>
         <Text>{item.desc}</Text>
         </View>
